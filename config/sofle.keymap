@@ -35,6 +35,18 @@
             key-positions = <9 10>; // 9 and 0 keys
             bindings = <&type_quotes_parens>;
         };
+        
+        combo_a_tilde {
+            timeout-ms = <50>;
+            key-positions = <13 14>; // A and S keys
+            bindings = <&kp RA(A)>; // ã (a with tilde)
+        };
+        
+        combo_o_tilde {
+            timeout-ms = <50>;
+            key-positions = <19 20>; // O and P keys
+            bindings = <&kp RA(O)>; // õ (o with tilde)
+        };
     };
 
     macros {
@@ -127,7 +139,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,   // left encoder (volume)
-                <&inc_dec_kp PG_UP PG_DN>;   // right encoder (page up/down)
+                <&inc_dec_kp UP_ARROW DOWN_ARROW>;   // right encoder (up/down arrows)
         };
 
         lower_layer {
@@ -149,7 +161,7 @@
                       &trans     &trans    &trans    &kp LEFT_GUI  &trans    &trans  &trans     &trans          &trans          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
 
         raise_layer {
@@ -170,7 +182,7 @@
                           &trans        &trans        &trans        &trans        &trans    &trans  &trans     &trans    &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
 
         adjust_layer {
