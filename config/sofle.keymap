@@ -38,6 +38,20 @@
     };
 
     macros {
+        a_tilde_macro: a_tilde_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE &kp A>;
+            label = "A_TILDE_MACRO";
+        };
+
+        o_tilde_macro: o_tilde_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE &kp O>;
+            label = "O_TILDE_MACRO";
+        };
+
         delete_word: delete_word {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -107,14 +121,14 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp A>, <&kp RA(N6)>;  // ã (a with tilde)
+            bindings = <&kp A>, <&a_tilde_macro>;
         };
 
         td_o: tap_dance_o {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp O>, <&kp RA(N0)>;  // õ (o with tilde)
+            bindings = <&kp O>, <&o_tilde_macro>;
         };
 
         td_lshift: tap_dance_left_shift {
