@@ -107,14 +107,14 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp A>, <&kp RA(A)>;
+            bindings = <&kp A>, <&kp RA(N6)>;  // ã (a with tilde)
         };
 
         td_o: tap_dance_o {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp O>, <&kp RA(O)>;
+            bindings = <&kp O>, <&kp RA(N0)>;  // õ (o with tilde)
         };
 
         td_lshift: tap_dance_left_shift {
